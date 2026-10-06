@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #3c4043;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #202124;
+}
+
+/* Form tìm kiếm */
+form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+form input[type="text"],
+form select {
+    padding: 10px 16px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+    background-color: #fff;
+    color: #3c4043;
+}
+
+form input[type="text"]:focus,
+form select:focus {
+    border-color: #1a73e8;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: inherit;
+}
+
+form button:hover {
+    background-color: #1557b0;
+}
+
+/* Container của bảng để cuộn ngang nếu cần */
+.table-container {
+    background: #ffffff;
+    border: 1px solid #f1f3f4;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* Bảng danh sách */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.order-table thead {
+    background-color: #ffffff;
+}
+
+/* Header của bảng */
+.order-table th {
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f1f3f4;
+    border-top: 1px solid #f1f3f4;
+}
+
+/* Dòng dữ liệu */
+.order-table td {
+    padding: 16px 24px;
+    font-size: 14px;
+    color: #3c4043;
+    border-bottom: 1px solid #f1f3f4;
+    vertical-align: middle;
+}
+
+.order-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.order-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Liên kết màu xanh (Mã đơn) */
+.text-blue {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.text-blue:hover {
+    text-decoration: underline;
+}
+
+/* Tên sản phẩm */
+.product-name {
+    font-weight: 500;
+    color: #202124;
+}
+
+/* Text căn giữa */
+.text-center {
+    text-align: center !important;
+}
+
+/* Badge (Trạng thái) */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Badge màu vàng (như Trạng thái kho trong ảnh) */
+.badge-warning {
+    background-color: #fff8e1;
+    /* Vàng nhạt */
+    color: #8f6c00;
+    /* Vàng đậm/nâu */
+}
+
+/* Badge màu xanh lá (shipped) */
+.badge-success {
+    background-color: #e6f4ea;
+    color: #137333;
+}
+
+/* Badge màu xanh dương (processing) */
+.badge-info {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+/* Badge màu đỏ (cancelled) */
+.badge-danger {
+    background-color: #fce8e6;
+    color: #c5221f;
+}
+
+/* Badge xám (mặc định) */
+.badge-default {
+    background-color: #f1f3f4;
+    color: #5f6368;
+}
+
+/* Phân trang */
+.pagination {
+    margin-top: 24px;
+    display: flex;
+    gap: 4px;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    background: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.pagination .active span {
+    background: #1a73e8;
+    color: #fff;
+    border-color: #1a73e8;
+}
+
+.pagination a:hover {
+    background: #f1f3f4;
+}
+
+.pagination .disabled {
+    color: #9aa0a6;
+    background: #f8f9fa;
+    border-color: #f1f3f4;
+    cursor: not-allowed;
+}
